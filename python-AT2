@@ -4,8 +4,11 @@ animals_list = ['rhino', 'meerkat', 'crocodile']
 for animals in animals_list:
     sighted = input("Animal sighted? Type s to stop: ").lower()
     if sighted in animals_list:
-        print("Animal already sighted.")
+        print("Animal already sighted.\n")
+    elif sighted == "s":
+        print(f"Animals in list: {animals_list}")
+        break
     else:
         animals_list.append(sighted)
-        print(f"{sighted.title()} added to sighted animals.")
+        print(f"{sighted.title()} added to sighted animals.\n")
     
