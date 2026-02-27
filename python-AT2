@@ -2,9 +2,11 @@ print("=== safari management ===")
 animals_list = ['Rhino', 'Meerkat', 'Crocodile']
 
 for i in range(1,9999):
-    sighted = input("Animal sighted? Type s to stop: ").title()
+    sighted = input("Animal sighted? Type S to stop: ").title()
     if sighted in animals_list:
         print("Animal already sighted.\n")
+    elif sighted == "":
+        print("You didn't input any name, just pressed enter, try again!")
     elif sighted == "S":
         print(f"Animals in list: {animals_list}")
         break
